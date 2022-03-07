@@ -13,7 +13,7 @@
 Your assignment page on Canvas should contain instructions for submitting this project. If you are still unsure, reach out to School Staff.
 
 ### Task 2: Minimum Viable Product
-
+x
 Use Node.js and Express to build an API that performs CRUD operations on users.
 
 - Add a `server` script to the `package.json` that runs the API using `nodemon`.
