@@ -10,8 +10,9 @@ server.use(express.json())
 server.post('/api/users', (req, res) => {
     const user = req.body;
     if (!user.name ||  !user.bio){
-        res.status(422).json({
-            message: 'name and bio required'
+        res.status(400).json({
+            message: 'Please provide name and bio for the user',
+
         })
     } else {
     User.insert(user)
@@ -20,7 +21,7 @@ server.post('/api/users', (req, res) => {
     })
         .catch(err => {
             res.status(500).json({
-                message: "error creating users",
+                message: "There was an error while saving the user to the database",
                 err: err.message,
                 stack: err.stack
           
